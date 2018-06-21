@@ -19,7 +19,7 @@ a{
 
 .topNavBar .logo{
     font-family:"Hiragino Kaku Gothic Std";
-    font-size: 13px;
+    font-size: 22px;
     float: left;
     padding-top: 1px;
     font-weight: bold;
@@ -40,6 +40,7 @@ a{
 
 .topNavBar nav{
     float: right;
+    font-size: 15px;
     padding-top: 8px;
     padding-bottom: 8px;
 }
@@ -56,7 +57,7 @@ a{
 
 .topNavBar nav>ul>li>a{
     text-decoration: none;
-    font-size: 15px;
+    
     color: #B7B7B7;
     font-weight: bold;
     border-bottom: 3px solid transparent;
