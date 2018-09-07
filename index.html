@@ -9,6 +9,61 @@
   <link rel="stylesheet" href="./style1.css">
   <script src=" //at.alicdn.com/t/font_718387_bh8nniiq0mm.js"></script>
   <style type="text/css">
+    .loading{
+      width: 200px;
+      height: 200px;
+      position: relative;
+
+    }
+    .loading::before,.loading::after{
+      content: '';
+      position: absolute;
+      width: 0px;
+      height: 0px;
+      background: black;
+      border-radius: 50%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      animation: quan 1.5s linear infinite;
+    }
+
+    .loading::after{
+      animation-delay: 0.75s;
+    }
+
+    @keyframes quan {
+      0%{
+        width: 0px; height: 0px; opacity: 0.6;
+
+      }
+      100%{
+        width: 100px; height: 100px;
+        opacity: 0;
+      }
+
+
+    }
+
+
+    .site-welcome{
+
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: #888;
+      z-index: 1;
+
+      justify-content: center;
+      align-items: center ;
+
+    }
+    .site-welcome.active{
+      display: flex;
+    }
+
     .icon {
       width: 1em; height: 1em;
       vertical-align: -0.15em;
@@ -18,6 +73,9 @@
   </style>
 </head>
 <body>
+  <div id="siteWelcome" class="site-welcome active">
+    <div class="loading"></div>
+  </div>
 <div class="topNavBar ">
   <div class="topNavBar-inner clearfix">
 
@@ -201,5 +259,10 @@
   </div>
 
 </section>
+  <script>
+      setTimeout(function(){
+          siteWelcome.classList.remove('active')
+      },1500)
+  </script>
 </body>
 </html>
