@@ -9,44 +9,47 @@
     <link rel="stylesheet" href="./style1.css">
     <script src=" //at.alicdn.com/t/font_718387_bh8nniiq0mm.js"></script>
     <style type="text/css">
+
         .loading {
-            width: 200px;
-            height: 200px;
-            position: relative;
+            width: 250px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-family: helvetica, arial, sans-serif;
+            text-transform: uppercase;
+            font-weight: 900;
+            color: #ce4233;
+            letter-spacing: 0.2em;
 
         }
 
         .loading::before, .loading::after {
-            content: '';
+            content: "";
+            display: block;
+            width: 15px;
+            height: 15px;
+            background: #ce4233;
             position: absolute;
-            width: 0px;
-            height: 0px;
-            background: black;
-            border-radius: 50%;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            margin: auto;
-            animation: quan 1.5s linear infinite;
+            animation: load .7s infinite alternate ease-in-out;
         }
+
+        .loading::before{
+            top: 0;
+        }
+
 
         .loading::after {
-            animation-delay: 0.75s;
+            bottom: 0;
         }
 
-        @keyframes quan {
-            0% {
-                width: 0px;
-                height: 0px;
-                opacity: 0.6;
-
-            }
-            100% {
-                width: 100px;
-                height: 100px;
-                opacity: 0;
-            }
+        @keyframes load {
+            0% { left: 0; height: 30px; width: 15px }
+            50% { height: 8px; width: 40px }
+            100% { left: 235px; height: 30px; width: 15px}
 
         }
 
@@ -58,7 +61,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: #888;
+            background:  #eaecfa;
             z-index: 1;
 
             justify-content: center;
@@ -81,7 +84,7 @@
 </head>
 <body>
 <div id="siteWelcome" class="site-welcome active">
-    <div class="loading"></div>
+    <div class="loading">loading.....</div>
 </div>
 <div id="topNavBar" class="topNavBar ">
     <div class="topNavBar-inner clearfix">
@@ -290,7 +293,7 @@
 <script>
     setTimeout(function () {
         siteWelcome.classList.remove('active')
-    }, 700)
+    }, 1000)
 
     let specialTags = document.querySelectorAll('[data-x]')
      for (let i=0; i<specialTags.length; i++){
