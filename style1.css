@@ -32,6 +32,10 @@ hr{
     clear: both;
 }
 
+[data-x].active{
+
+}
+
 .topNavBar{
     padding: 20px 0 20px 0;
     position: fixed;
@@ -46,7 +50,7 @@ hr{
 
 .topNavBar.sticky{
     background: #fff;
-    padding: 10px 0;
+    padding: 10px 0px;
     color: #3C3F41;
     z-index: 1;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -107,7 +111,8 @@ hr{
 
 }
 
-.topNavBar nav>ul>li.active>a::after{
+.topNavBar nav>ul>li.active>a::after,
+.topNavBar nav>ul>li.highLight>a::after{
     content: '';
     display: block;
     position: absolute;

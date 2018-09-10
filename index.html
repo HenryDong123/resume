@@ -130,7 +130,7 @@
     </div>
 </div>
 <main>
-    <div id="siteAbout" class="userCard">
+    <div data-x id="siteAbout" class="userCard">
         <div class="pictureAndText clearfix">
             <div class="picture">
                 <img src="./img/head2.jpg" width="299" height="349" alt="头像">
@@ -186,7 +186,7 @@
     </p>
 
 </main>
-<section id="siteSkills" class="skills">
+<section data-x id="siteSkills" class="skills">
     <h2>技能</h2>
     <ol class="clearfix">
         <li>
@@ -240,7 +240,7 @@
 
     </ol>
 </section>
-<section id="siteWorks" class="portfolio">
+<section data-x id="siteWorks" class="portfolio">
     <h2>作品集</h2>
     <nav>
         <ol class="clearfix">
@@ -286,10 +286,11 @@
     </div>
 
 </section>
-<script defer="defer">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.js"></script>
+<script>
     setTimeout(function () {
         siteWelcome.classList.remove('active')
-    }, 1500)
+    }, 700)
 
     window.onscroll = function (gun) {
         if (window.scrollY > 0) {
@@ -298,6 +299,33 @@
         } else {
             topNavBar.classList.remove('sticky')
         }
+
+        let specialTags = document.querySelectorAll('[data-x]')
+        let minIndex= 0
+        for (let i=1; i<specialTags.length; i++){
+            if(Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY)){
+                minIndex = i
+
+            }
+
+        }
+        console.log(minIndex)
+
+        for (let i=0; i<specialTags.length; i++){
+            specialTags[i].classList.remove('active')
+        }
+
+        specialTags[minIndex].classList.add('active')
+
+        let id = specialTags[minIndex].id
+        let a = document.querySelector('a[href="#'+ id + '"]')
+        let li = a.parentNode
+        let brothersAndMe = li.parentNode.children
+        
+        for (let i=0; i<brothersAndMe.length; i++){
+            brothersAndMe[i].classList.remove('highLight')
+        }
+        li.classList.add('highLight')
 
     }
 
@@ -316,7 +344,20 @@
         }
     }
 
+
+
+
     let aTags = document.querySelectorAll('nav.menu > ul > li > a')
+
+    function animate(time) {
+        requestAnimationFrame(animate);
+        TWEEN.update(time);
+    }
+
+    requestAnimationFrame(animate);
+
+
+
     for (let i=0; i<aTags.length ;i++){
         aTags[i].onclick = function (g) {
             g.preventDefault()
@@ -324,7 +365,24 @@
             let href = a.getAttribute('href')
             let element = document.querySelector(href)
             let top = element.offsetTop
-            window.scrollTo(0, top - 95)
+
+
+            let currentTop = window.scrollY
+            let targetTop = top -95
+
+            let s = targetTop -currentTop
+
+            var coords = {y: currentTop};
+            var t = Math.abs(s/100)*1000
+            if (t>1000){ t = 1000}
+            var tween = new TWEEN.Tween(coords)
+                .to({ y: targetTop}, t)
+                .easing(TWEEN.Easing.Back  .InOut)
+                .onUpdate(function () {
+                    window.scrollTo(0,coords.y)
+
+                })
+                .start();
 
         }
     }
