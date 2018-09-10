@@ -292,6 +292,16 @@
         siteWelcome.classList.remove('active')
     }, 700)
 
+    let specialTags = document.querySelectorAll('[data-x]')
+     for (let i=0; i<specialTags.length; i++){
+         specialTags[i].classList.add('offset')
+     }
+
+    setTimeout(function () {
+        gundongUP()
+
+    },1000)
+
     window.onscroll = function (gun) {
         if (window.scrollY > 0) {
             console.log(scrollY)
@@ -300,32 +310,9 @@
             topNavBar.classList.remove('sticky')
         }
 
-        let specialTags = document.querySelectorAll('[data-x]')
-        let minIndex= 0
-        for (let i=1; i<specialTags.length; i++){
-            if(Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY)){
-                minIndex = i
+        gundongUP()
 
-            }
 
-        }
-        console.log(minIndex)
-
-        for (let i=0; i<specialTags.length; i++){
-            specialTags[i].classList.remove('active')
-        }
-
-        specialTags[minIndex].classList.add('active')
-
-        let id = specialTags[minIndex].id
-        let a = document.querySelector('a[href="#'+ id + '"]')
-        let li = a.parentNode
-        let brothersAndMe = li.parentNode.children
-        
-        for (let i=0; i<brothersAndMe.length; i++){
-            brothersAndMe[i].classList.remove('highLight')
-        }
-        li.classList.add('highLight')
 
     }
 
@@ -348,6 +335,28 @@
 
 
     let aTags = document.querySelectorAll('nav.menu > ul > li > a')
+
+    function gundongUP() {
+        let specialTags = document.querySelectorAll('[data-x]')
+        let minIndex= 0
+        for (let i=1; i<specialTags.length; i++){
+            if(Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY)){
+                minIndex = i
+            }
+        }
+        //
+        specialTags[minIndex].classList.remove('offset')
+        let id = specialTags[minIndex].id
+        let a = document.querySelector('a[href="#'+ id + '"]')
+        let li = a.parentNode
+        let brothersAndMe = li.parentNode.children
+
+        for (let i=0; i<brothersAndMe.length; i++){
+            brothersAndMe[i].classList.remove('highLight')
+        }
+        li.classList.add('highLight')
+
+    }
 
     function animate(time) {
         requestAnimationFrame(animate);

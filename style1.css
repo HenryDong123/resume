@@ -36,6 +36,27 @@ hr{
 
 }
 
+[data-x].offset{
+    transform: translateY(100px);
+}
+
+[data-x]{
+    transform: translateY(0);
+    transition:  all 0.5s;
+
+}
+
+@keyframes slidUp {
+    0%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+
+
+}
+
 .topNavBar{
     padding: 20px 0 20px 0;
     position: fixed;
@@ -366,6 +387,7 @@ section.skills .progressBar{
     background: #FAE1E1;
     border-right: 3px;
     margin: 4px 0 40px;
+    overflow: hidden;
 }
 
 section.skills .progressBar .progress{
@@ -373,7 +395,14 @@ section.skills .progressBar .progress{
     background: #e6686a;
     width: 70%;
     border-right: 3px;
+    transform: translateX(0);
+    transition: all 1s;
 }
+
+section.skills.offset .progress{
+    transform: translateX(-100%);
+}
+
 section.portfolio{
     text-align: center;
     margin-bottom: 100px;
