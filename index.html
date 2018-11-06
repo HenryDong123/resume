@@ -1,99 +1,28 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     <title>东明轩的个人简历</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
-    <link rel="stylesheet" href="./style1.css">
     <script src=" //at.alicdn.com/t/font_718387_bh8nniiq0mm.js"></script>
-    <style type="text/css">
-
-        .loading {
-            width: 250px;
-            height: 50px;
-            line-height: 50px;
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            font-family: helvetica, arial, sans-serif;
-            text-transform: uppercase;
-            font-weight: 900;
-            color: #ce4233;
-            letter-spacing: 0.2em;
-
-        }
-
-        .loading::before, .loading::after {
-            content: "";
-            display: block;
-            width: 15px;
-            height: 15px;
-            background: #ce4233;
-            position: absolute;
-            animation: load .7s infinite alternate ease-in-out;
-        }
-
-        .loading::before{
-            top: 0;
-        }
-
-
-        .loading::after {
-            bottom: 0;
-        }
-
-        @keyframes load {
-            0% { left: 0; height: 30px; width: 15px }
-            50% { height: 8px; width: 40px }
-            100% { left: 235px; height: 30px; width: 15px}
-
-        }
-
-        .site-welcome {
-
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background:  #eaecfa;
-            z-index: 1;
-
-            justify-content: center;
-            align-items: center;
-
-        }
-
-        .site-welcome.active {
-            display: flex;
-        }
-
-        .icon {
-            width: 1em;
-            height: 1em;
-            vertical-align: -0.15em;
-            fill: currentColor;
-            overflow: hidden;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
+    <link rel="stylesheet" href="./css/loading.css">
+    <link rel="stylesheet" href="./css/style1.css">
 </head>
+
 <body>
 <div id="siteWelcome" class="site-welcome active">
     <div class="loading">loading.....</div>
 </div>
-<div id="topNavBar" class="topNavBar ">
+<div id="topNavBar" class="topNavBar">
     <div class="topNavBar-inner clearfix">
-
-        <a class="logo" href="#" alt="logo">
-            <span class="Henry">Henry</span><span class="Dong">Dong</span>
+        <a class="logo" href="#" alt="logo" style="float: left;">
+            <span class="rs">Henry</span>
+            <span class="card">Dong</span>
         </a>
-        <nav class="menu">
+        <nav class="menu" style="float: right;">
             <ul class="clearfix">
                 <li>
                     <a href="#siteAbout">关于</a>
@@ -103,61 +32,59 @@
                 </li>
                 <li>
                     <a href="#siteWorks">作品</a>
-                    <ul class="subMenu">
+                    <ul class="submenu">
                         <li>作品1</li>
                         <li>作品2</li>
                         <li>作品3</li>
                     </ul>
                 </li>
-
                 <li>
                     <a href="#">博客</a>
-                    <ul class="subMenu">
-                        <li>文章1</li>
-                        <li>文章2</li>
-                        <li>文章3</li>
+                    <ul class="submenu">
+                        <li>博客1</li>
+                        <li>博客2</li>
+                        <li>博客3</li>
                     </ul>
                 </li>
-
-
-                <li><a href="#">日历</a></li>
-                <li><a href="#">联系方式</a></li>
-                <li><a href="#">其他</a></li>
+                <li>
+                    <a href="#">日历</a>
+                </li>
+                <li>
+                    <a href="#">联系方式</a>
+                </li>
+                <li>
+                    <a href="#">其他</a>
+                </li>
             </ul>
         </nav>
     </div>
 </div>
-
 <div class="banner">
-    <div class="mask">
-
-    </div>
+    <div class="mask"></div>
 </div>
 <main>
     <div data-x id="siteAbout" class="userCard">
         <div class="pictureAndText clearfix">
             <div class="picture">
-                <img src="./img/head2.jpg" width="299" height="349" alt="头像">
+                <img src="./img/head2.jpg" width=299 height=347 alt="头像">
             </div>
             <div class="text">
-
           <span class="welcome">Hello
-          <span class="triiangle"></span>
+            <span class="triangle"></span>
           </span>
                 <h1>东明轩</h1>
-                <p>应聘职位：前端开发工程师</p>
+                <p>前端开发工程师</p>
                 <hr>
                 <dl>
                     <dt>年龄</dt>
-                    <dd>21</dd>
+                    <dd>18</dd>
                     <dt>所在城市</dt>
                     <dd>北京</dd>
                     <dt>邮箱</dt>
                     <dd>943082205@qq.com</dd>
                     <dt>手机</dt>
-                    <dd>17681401610</dd>
+                    <dd>17610480619</dd>
                 </dl>
-
             </div>
         </div>
         <footer class="media">
@@ -179,14 +106,14 @@
 
         </footer>
     </div>
+
     <p class="downloadResume-wrapper">
         <a class="downloadResume" href="./resume.pdf" target="_blank" download>下载 PDF 简历</a>
-
     </p>
 
-
     <p class="selfIntroduction">
-        萨迪克拉拉裤受打击了卡时间第三方就上课了的房间里上课的法律圣诞节福利是快递费的路口附近莱克斯顿简历看到了可是解放军冻死了开发段拉克丝建档立卡设计的奥斯卡建档立卡达拉斯讲道理<br>
+        方应杭， 资深前端工程师，资深前端讲师，现在在 饥人谷 教前端课程。
+        <br> 技能：前端开发，Rails 开发，Node.js 开发
     </p>
 
 </main>
@@ -198,7 +125,7 @@
                 HTML 5 &amp; CSS 3
             </h3>
             <div class="progressBar">
-                <div class="progress"></div>
+                <div class="progress" style="width: 10%;"></div>
             </div>
         </li>
         <li>
@@ -206,15 +133,15 @@
                 JavaScript
             </h3>
             <div class="progressBar">
-                <div class="progress"></div>
+                <div class="progress" style="width: 20%"></div>
             </div>
         </li>
         <li>
             <h3>
-                JQuery
+                jQuery
             </h3>
             <div class="progressBar">
-                <div class="progress"></div>
+                <div class="progress" style="width: 30%"></div>
             </div>
         </li>
         <li>
@@ -222,7 +149,7 @@
                 Vue.js
             </h3>
             <div class="progressBar">
-                <div class="progress"></div>
+                <div class="progress" style="width: 40%"></div>
             </div>
         </li>
         <li>
@@ -230,7 +157,7 @@
                 React.js
             </h3>
             <div class="progressBar">
-                <div class="progress"></div>
+                <div class="progress"  style="width: 50%"></div>
             </div>
         </li>
         <li>
@@ -238,181 +165,58 @@
                 Node.js
             </h3>
             <div class="progressBar">
-                <div class="progress"></div>
+                <div class="progress"  style="width: 60%"></div>
             </div>
         </li>
-
     </ol>
 </section>
-<section data-x id="siteWorks" class="portfolio">
+<section data-x class="portfolio" id="siteWorks">
     <h2>作品集</h2>
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <img class="swiper-slide" src="./img/items/apple-style-slides.jpg"></img>
-            <img class="swiper-slide" src="./img/items/canvas.jpg"></img>
-            <img class="swiper-slide" src="./img/items/nav-page.jpg"></img>
+
+    <!-- 这就是 view , 用户看得见的东西-->
+    <!-- Slider main container -->
+    <div id="mySlides" class="mySlides">
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="./img/items/nav-page.jpg"></div>
+                <div class="swiper-slide"><img src="./img/items/canvas.jpg"></div>
+                <div class="swiper-slide"><img src="./img/items/apple-style-slides.jpg"></div>
+
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
         </div>
-        <!-- 如果需要分页器 -->
-        <div class="swiper-pagination"></div>
-
-        <!-- 如果需要导航按钮 -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-
+        <div class="swiper-button-prev swiper-button-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
     </div>
 
-
-
-
-
-
-
 </section>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.js"></script>
+<section class="message">
+    <h2>留言</h2>
+    <ol id="messageList">
+    </ol>
+    <form id="postMessageForm" style="width: 700px; margin: 50px auto;">
+        <label for="">姓名</label>
+        <input type="text" name="name">
+        <label for="">内容</label>
+        <input type="text" name="content">
+        <input type="submit" value="提交">
+    </form>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
-<script>
-    setTimeout(function () {
-        siteWelcome.classList.remove('active')
-    }, 1000)
-
-    
-
-    let specialTags = document.querySelectorAll('[data-x]')
-     for (let i=0; i<specialTags.length; i++){
-         specialTags[i].classList.add('offset')
-     }
-
-    setTimeout(function () {
-        gundongUP()
-
-    },1000)
-
-    window.onscroll = function (gun) {
-        if (window.scrollY > 0) {
-            console.log(scrollY)
-            topNavBar.classList.add('sticky')
-        } else {
-            topNavBar.classList.remove('sticky')
-        }
-
-        gundongUP()
-
-
-
-    }
-
-    let liTags = document.querySelectorAll('nav.menu > ul >li')
-    for (let i = 0; i < liTags.length; i++) {
-        liTags[i].onmouseenter = function (j) {
-            j.currentTarget.classList.add('active')
-
-
-
-        }
-        liTags[i].onmouseleave = function (j) {
-            j.currentTarget.classList.remove('active')
-
-
-        }
-    }
-
-
-
-
-    let aTags = document.querySelectorAll('nav.menu > ul > li > a')
-
-    function gundongUP() {
-        let specialTags = document.querySelectorAll('[data-x]')
-        let minIndex= 0
-        for (let i=1; i<specialTags.length; i++){
-            if(Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY)){
-                minIndex = i
-            }
-        }
-        //
-        specialTags[minIndex].classList.remove('offset')
-        let id = specialTags[minIndex].id
-        let a = document.querySelector('a[href="#'+ id + '"]')
-        let li = a.parentNode
-        let brothersAndMe = li.parentNode.children
-
-        for (let i=0; i<brothersAndMe.length; i++){
-            brothersAndMe[i].classList.remove('highLight')
-        }
-        li.classList.add('highLight')
-
-    }
-
-    function animate(time) {
-        requestAnimationFrame(animate);
-        TWEEN.update(time);
-    }
-
-    requestAnimationFrame(animate);
-
-
-
-    for (let i=0; i<aTags.length ;i++){
-        aTags[i].onclick = function (g) {
-            g.preventDefault()
-            let a = g.currentTarget
-            let href = a.getAttribute('href')
-            let element = document.querySelector(href)
-            let top = element.offsetTop
-
-
-            let currentTop = window.scrollY
-            let targetTop = top -95
-
-            let s = targetTop -currentTop
-
-            var coords = {y: currentTop};
-            var t = Math.abs(s/100)*1000
-            if (t>1000){ t = 1000}
-            var tween = new TWEEN.Tween(coords)
-                .to({ y: targetTop}, t)
-                .easing(TWEEN.Easing.Back  .InOut)
-                .onUpdate(function () {
-                    window.scrollTo(0,coords.y)
-
-                })
-                .start();
-
-        }
-    }
-
-    var mySwiper = new Swiper ('.swiper-container', {
-        loop: true, // 循环模式选项
-        autoplay: true,
-
-        // 如果需要分页器
-        pagination: {
-            el: '.swiper-pagination',
-        },
-
-        // 如果需要前进后退按钮
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
-        effect : 'fade',
-        fadeEffect: {
-            crossFade: true,
-        }
-
-
-    })
-
-    mySwiper.el.onmouseover = function(){
-        mySwiper.autoplay.stop();
-    }
-
-    mySwiper.el.onmouseleave = function(){
-        mySwiper.autoplay.start();
-    }
-
-</script>
+<script src="//cdn1.lncld.net/static/js/3.5.0/av-min.js"></script>
+<!-- 模块化 -->
+<script src="./js/loading.js"></script>
+<script src="./js/init-swiper.js"></script>
+<script src="./js/auto-slide-up.js"></script>
+<script src="./js/sticky-topbar.js"></script>
+<script src="./js/smoothly-navigation.js"></script>
+<script src="./js/message.js"></script>
 </body>
+
 </html>
