@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>东明轩的个人简历</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
     <link rel="stylesheet" href="./style1.css">
     <script src=" //at.alicdn.com/t/font_718387_bh8nniiq0mm.js"></script>
     <style type="text/css">
@@ -245,51 +246,31 @@
 </section>
 <section data-x id="siteWorks" class="portfolio">
     <h2>作品集</h2>
-    <nav>
-        <ol class="clearfix">
-            <li id="portfolio1">所有</li>
-            <li id="portfolio2">框架</li>
-            <li id="portfolio3">原生JS&amp;CSS</li>
-        </ol>
-        <div id="portfolioBar" class="bar state-1">
-            <div class="bar-inner">
-
-            </div>
-
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <img class="swiper-slide" src="./img/items/apple-style-slides.jpg"></img>
+            <img class="swiper-slide" src="./img/items/canvas.jpg"></img>
+            <img class="swiper-slide" src="./img/items/nav-page.jpg"></img>
         </div>
-    </nav>
-    <script>
-        portfolio1.onclick = function () {
-            portfolioBar.className = 'bar state-1'
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
 
-        }
-        portfolio2.onclick = function () {
-            portfolioBar.className = 'bar state-2'
+        <!-- 如果需要导航按钮 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
 
-        }
-        portfolio3.onclick = function () {
-            portfolioBar.className = 'bar state-3'
 
-        }
-
-    </script>
-
-    <div class="works" style="height: 597px;">
-        <div class="big" style="top: 0;left: 0;">
-            <img src="./img/item1.jpg" alt="作品1">
-
-        </div>
-        <div class="small" style="top: 0;left: 645px;">
-            <img src="./img/item2.jpg" alt="作品2">
-
-        </div>
-        <div class="small" style="top: 298px;left: 645px;">
-            <img src="./img/item3.jpg" alt="作品3">
-        </div>
     </div>
+
+
+
+
+
+
 
 </section>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
 <script>
     setTimeout(function () {
         siteWelcome.classList.remove('active')
@@ -399,6 +380,37 @@
                 .start();
 
         }
+    }
+
+    var mySwiper = new Swiper ('.swiper-container', {
+        loop: true, // 循环模式选项
+        autoplay: true,
+
+        // 如果需要分页器
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        effect : 'fade',
+        fadeEffect: {
+            crossFade: true,
+        }
+
+
+    })
+
+    mySwiper.el.onmouseover = function(){
+        mySwiper.autoplay.stop();
+    }
+
+    mySwiper.el.onmouseleave = function(){
+        mySwiper.autoplay.start();
     }
 
 </script>
