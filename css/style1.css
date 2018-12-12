@@ -122,7 +122,7 @@ h1, h2, h3, h4, h5, h6 {
     top: 100%;
     left: 0;
     width: 100%;
-    background: #e06567;
+    background: #639BF1;
     height: 3px;
     animation: menuSlide .3s;
 }
@@ -174,7 +174,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .topNavBar .logo .rs {
     margin-right: 4px;
-    color: #e6686a;
+    color: #639BF1;
 }
 
 .topNavBar .logo .card {
@@ -202,7 +202,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .userCard .welcome {
-    background: #e6686a;
+    background: #639BF1;
     color: white;
     display: inline-block;
     padding: 4px 16px;
@@ -215,7 +215,7 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     border: 10px solid transparent;
     width: 0px;
-    border-left-color: #e6686a;
+    border-left-color: #639BF1;
     border-top-width: 0px;
     position: absolute;
     left: 4px;
@@ -260,7 +260,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .userCard > footer.media {
-    background: #e6686a;
+    background: #639BF1;
     text-align: center;
 }
 
@@ -274,7 +274,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .userCard > footer.media > a:hover {
-    background: #cf5d5f;
+    background: #639BF1;
 }
 
 .userCard svg {
@@ -363,7 +363,7 @@ section.skills > ol > li:nth-child(even) {
 
 section.skills .progressBar {
     height: 5px;
-    background: #FAE1E1;
+    background: #b6e1f1;
     border-radius: 2px;
     margin: 4px 0 40px;
     overflow: hidden;
@@ -371,7 +371,7 @@ section.skills .progressBar {
 
 section.skills .progressBar > .progress {
     height: 100%;
-    background: #E6686A;
+    background: #3a8af1;
     width: 70%;
     border-radius: 2px;
     transform: translateX(0);
@@ -392,26 +392,69 @@ section.portfolio h2 {
     margin-bottom: 32px;
 }
 
-section.portfolio .mySlides{
+section.portfolio .mySlides {
     width: 100%;
+
 }
 
 section.portfolio .swiper-container {
     width: 95%;
     padding-top: 0.5rem;
+    height: 430px;
 }
 
-section.portfolio .swiper-slide{
+section.portfolio .swiper-slide {
     background-position: center;
     background-size: 130% 120%;
     width: 60%;
+    height: 100%;
+
 }
 
-section.portfolio .swiper-slide img{
+.x {
+    width: 100%;
+
+    background: #ffffff;
+    border-radius: 10px;
+
+}
+
+.itemTitle {
+    background: #d8d8d8;
+    height: 30px;
+    font-size: 18px;
+    color: white;
+    text-shadow: 0px 0px 4px black;
+    font-weight: bold;
+
+}
+
+.itemImg {
+    height: 250px;
+}
+
+.itemDes {
+    height: 121px;
+}
+
+.itemFooter {
+    background: #639BF1;
+    height: 30px;
+}
+
+.githubBtn,
+.previewBtn {
+    padding: 0px 10px;
+    float: right;
+    margin: 3px 2px;
+    border-radius: 4px;
+    background: #fff;
+}
+
+section.portfolio .swiper-slide img {
     display: block;
     width: 100%;
 }
-
 
 section.portfolio .swiper-button-prev,
 section.portfolio .swiper-button-next {
@@ -421,7 +464,6 @@ section.portfolio .swiper-button-next {
     right: 100%;
     left: auto;
     border-radius: 20%;
-
 
     top: 5rem;
     width: 10%;
@@ -434,10 +476,15 @@ section.portfolio .swiper-button-next {
     right: auto;
 }
 
+section.message {
+
+}
+
 section.message > ol {
     max-width: 700px;
-    margin: 0 auto;
+    margin: 30px auto;
     border-top: 1px solid #DDD;
+
 }
 
 section.message > ol > li {

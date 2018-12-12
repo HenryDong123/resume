@@ -24,37 +24,24 @@
         </a>
         <nav class="menu" style="float: right;">
             <ul class="clearfix">
-                <li>
+                <li class="tween">
                     <a href="#siteAbout">关于</a>
                 </li>
-                <li>
+                <li class="tween">
                     <a href="#siteSkills">技能</a>
                 </li>
-                <li>
+                <li class="tween">
                     <a href="#siteWorks">作品</a>
-                    <ul class="submenu">
-                        <li>作品1</li>
-                        <li>作品2</li>
-                        <li>作品3</li>
-                    </ul>
+
+                </li>
+                <li class="tween">
+                    <a href="#siteMessage">留言</a>
+
                 </li>
                 <li>
-                    <a href="#">博客</a>
-                    <ul class="submenu">
-                        <li>博客1</li>
-                        <li>博客2</li>
-                        <li>博客3</li>
-                    </ul>
+                    <a href="https://www.zhihu.com/people/dong-ming-xuan-74/posts" target="_blank">博客</a>
                 </li>
-                <li>
-                    <a href="#">日历</a>
-                </li>
-                <li>
-                    <a href="#">联系方式</a>
-                </li>
-                <li>
-                    <a href="#">其他</a>
-                </li>
+
             </ul>
         </nav>
     </div>
@@ -73,7 +60,8 @@
             <span class="triangle"></span>
           </span>
                 <h1>东明轩</h1>
-                <p>前端开发工程师</p>
+                <p>应聘职业：前端开发</p>
+                <p>热爱学习技术，自学能力强，乐于接触新技术</p>
                 <hr>
                 <dl>
                     <dt>年龄</dt>
@@ -88,17 +76,17 @@
             </div>
         </div>
         <footer class="media">
-            <a href="#">
+            <a href="https://github.com/HenryDong123" target="_blank">
                 <svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-github4"></use>
                 </svg>
             </a>
-            <a href="#">
+            <a href="https://www.zhihu.com/people/dong-ming-xuan-74/posts" target="_blank">
                 <svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-zhihu0"></use>
                 </svg>
             </a>
-            <a href="#">
+            <a href="https://weibo.com/u/5898659482" target="_blank">
                 <svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-weibo"></use>
                 </svg>
@@ -112,8 +100,14 @@
     </p>
 
     <p class="selfIntroduction">
-        方应杭， 资深前端工程师，资深前端讲师，现在在 饥人谷 教前端课程。
-        <br> 技能：前端开发，Rails 开发，Node.js 开发
+        熟悉掌握HTML/CSS/Javas
+        <br> 熟悉HTTP请求与响应
+        <br> 熟悉webpack打包工具
+        <br> 熟悉JQuery/VUe.js ，
+        <br> 熟悉git npm
+        <br> 熟悉命令行，面向对象，MVC，MVVM，函数闭包，Ajax等
+
+
     </p>
 
 </main>
@@ -125,7 +119,7 @@
                 HTML 5 &amp; CSS 3
             </h3>
             <div class="progressBar">
-                <div class="progress" style="width: 10%;"></div>
+                <div class="progress" style="width: 80%;"></div>
             </div>
         </li>
         <li>
@@ -133,7 +127,7 @@
                 JavaScript
             </h3>
             <div class="progressBar">
-                <div class="progress" style="width: 20%"></div>
+                <div class="progress" style="width: 80%"></div>
             </div>
         </li>
         <li>
@@ -141,7 +135,7 @@
                 jQuery
             </h3>
             <div class="progressBar">
-                <div class="progress" style="width: 30%"></div>
+                <div class="progress" style="width: 75%"></div>
             </div>
         </li>
         <li>
@@ -149,25 +143,10 @@
                 Vue.js
             </h3>
             <div class="progressBar">
-                <div class="progress" style="width: 40%"></div>
+                <div class="progress" style="width: 75%"></div>
             </div>
         </li>
-        <li>
-            <h3>
-                React.js
-            </h3>
-            <div class="progressBar">
-                <div class="progress"  style="width: 50%"></div>
-            </div>
-        </li>
-        <li>
-            <h3>
-                Node.js
-            </h3>
-            <div class="progressBar">
-                <div class="progress"  style="width: 60%"></div>
-            </div>
-        </li>
+
     </ol>
 </section>
 <section data-x class="portfolio" id="siteWorks">
@@ -180,9 +159,66 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
-                <div class="swiper-slide"><img src="./img/items/nav-page.jpg"></div>
-                <div class="swiper-slide"><img src="./img/items/canvas.jpg"></div>
-                <div class="swiper-slide"><img src="./img/items/apple-style-slides.jpg"></div>
+                <div class="swiper-slide">
+                    <div class="x">
+                        <div class="itemTitle">cnode.js社区</div>
+                        <img class="itemImg" src="./img/cnode.png" alt="">
+                        <div class="itemDes">
+                            <ul>
+                                <li>简介：用Vue来还原了cnode社区，使用cnode社区提供的API获取了数据</li>
+                                <li>技术栈：vue.js，vue-router，axios，JQuery，webpack</li>
+
+                            </ul>
+                        </div>
+                        <div class="itemFooter">
+                            <span  class="previewBtn"><a href="https://henrydong123.github.io/personal-FM/index.html" target="_blank">preview</a></span>
+                            <span class="githubBtn"><a href="https://github.com/HenryDong123/personal-FM" target="_blank">Github</a></span>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="x">
+                        <div class="itemTitle">私人FM</div>
+                        <img class="itemImg" src="./img/fm.png" alt="">
+                        <div class="itemDes">
+                            <ul>
+                                <li>简介：一个使用原生JS适配了移动端的私人FM电台，根据所选分类的不同随机播放歌曲</li>
+                                <li>FM API数据来源于百度FM</li>
+                                <li>技术栈：，ajax</li>
+
+                            </ul>
+                        </div>
+                        <div class="itemFooter">
+                            <span  class="previewBtn"><a href="https://henrydong123.github.io/personal-FM/index.html" target="_blank">preview</a></span>
+                            <span class="githubBtn"><a href="https://github.com/HenryDong123/personal-FM" target="_blank">Github</a></span>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="x">
+                        <div class="itemTitle">DMX音乐播放器</div>
+                        <img class="itemImg" src="./img/dmx1.png" alt="">
+                        <div class="itemDes">
+                            <ul>
+                                <li>简介：一个web端的音乐播放器，包含了可以自如的增删改查的后台管理端</li>
+                                <li>
+                                    依赖于LeanCloud和七牛，和一个自己写的node.js本地服务器
+                                </li>
+                                <li>技术栈：原生HTML/CSS/Javascript，JQuery</li>
+
+                            </ul>
+                        </div>
+                        <div class="itemFooter">
+
+                            <span class="githubBtn" ><a href="https://github.com/HenryDong123/163muscle-m" target="_blank">Github</a></span>
+                        </div>
+                    </div>
+                </div>
+
+
 
             </div>
             <!-- If we need pagination -->
@@ -195,7 +231,7 @@
     </div>
 
 </section>
-<section class="message">
+<section data-x class="message" id="siteMessage">
     <h2>留言</h2>
     <ol id="messageList">
     </ol>

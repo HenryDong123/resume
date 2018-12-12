@@ -4,7 +4,9 @@
         view: null,
         swiper: null,
         swiperOptions: {
-            autoplay: true,
+            autoplay: {
+                delay: .1,
+            },
             touchRatio: 1,
             loop: true,
             slidesPerView: 5,

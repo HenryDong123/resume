@@ -33,7 +33,7 @@
         .start(); // 开始缓动
     },
     bindEvents: function(){
-      let aTags = this.view.querySelectorAll('nav.menu > ul > li > a')
+      let aTags = this.view.querySelectorAll('.tween > a')
       for(let i=0; i<aTags.length; i++){
         aTags[i].onclick = (x)=>{
           x.preventDefault()
