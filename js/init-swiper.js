@@ -5,7 +5,7 @@
         swiper: null,
         swiperOptions: {
             autoplay: {
-                delay: .1,
+                delay: 3500,
             },
             touchRatio: 1,
             loop: true,
